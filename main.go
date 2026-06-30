@@ -19,10 +19,20 @@ func NewLogger (prefix string) (*log.Logger) {
 
 }
 
-var (
-	DebugLevel = log.DebugLevel
-	InfoLevel  = log.InfoLevel
-	WarnLevel  = log.WarnLevel
-	ErrorLevel = log.ErrorLevel
-	FatalLevel = log.FatalLevel
-)
+func SetLogLevel (level string) (log.Level) {
+
+	switch level {
+		case "Debug":
+			return log.DebugLevel
+		case "Warn":
+			return log.WarnLevel
+		case "Fatal":
+			return log.FatalLevel
+		case "Error":
+			return log.ErrorLevel
+	}
+
+	return log.InfoLevel
+
+}
+
