@@ -37,3 +37,7 @@ func SetLogLevel (level string) (log.Level) {
 
 }
 
+var (
+	Logger *log.Logger
+)
+
