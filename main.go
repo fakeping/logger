@@ -4,6 +4,7 @@ import (
 	"github.com/charmbracelet/log"
 	"time"
 	"os"
+	"strings"
 )
 
 func NewLogger (prefix string) (*log.Logger) {
@@ -21,14 +22,14 @@ func NewLogger (prefix string) (*log.Logger) {
 
 func SetLogLevel (level string) (log.Level) {
 
-	switch level {
-		case "Debug":
+	switch strings.ToLower(level) {
+		case "debug":
 			return log.DebugLevel
-		case "Warn":
+		case "warn":
 			return log.WarnLevel
-		case "Fatal":
+		case "fatal":
 			return log.FatalLevel
-		case "Error":
+		case "error":
 			return log.ErrorLevel
 	}
 
