@@ -19,4 +19,10 @@ func NewLogger (prefix string) (*log.Logger) {
 
 }
 
-var DebugLevel = log.DebugLevel
+var (
+	DebugLevel = log.DebugLevel
+	InfoLevel  = log.InfoLevel
+	WarnLevel  = log.WarnLevel
+	ErrorLevel = log.ErrorLevel
+	FatalLevel = log.FatalLevel
+)
