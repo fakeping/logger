@@ -1,0 +1,1 @@
+# fakeping logger package
