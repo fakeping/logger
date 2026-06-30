@@ -18,3 +18,5 @@ func NewLogger (prefix string) (*log.Logger) {
 	return logger
 
 }
+
+var DebugLevel = log.DebugLevel
